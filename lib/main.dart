@@ -10,7 +10,11 @@ void main() {
           centerTitle: true,
           title: Text(
             "Ask me anything !",
-            style: TextStyle(color: Colors.white,fontSize: 50.0,fontFamily: 'GreatVibes',),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 50.0,
+              fontFamily: 'GreatVibes',
+            ),
           ),
           backgroundColor: Colors.lightBlue,
         ),
@@ -34,17 +38,16 @@ class _BallPageState extends State<BallPage> {
     return SafeArea(
       child: Center(
           child: TextButton(
-            child: Image(
-              image: AssetImage("images/ball$BallNumber.png"),
-            ),
-            onPressed: () {
-              setState ((){
-                BallNumber = Random().nextInt(5) + 1;
-              });
-              print("test boule divination");
-            },
-          )
-          ),
-        );
+        child: Image(
+          image: AssetImage("images/ball$BallNumber.png"),
+        ),
+        onPressed: () {
+          setState(() {
+            BallNumber = Random().nextInt(5) + 1;
+          });
+          print("test boule divination");
+        },
+      )),
+    );
   }
 }
