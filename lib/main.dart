@@ -13,9 +13,11 @@ void main() {
           ),
           backgroundColor: Colors.lightBlue,
         ),
-        body: Center(
-          child: Image(
-            image: AssetImage("images/ball1.png"),
+        body: SafeArea(
+          child: Center(
+            child: Image(
+              image: AssetImage("images/ball1.png"),
+            ),
           ),
         ),
       ),
